@@ -1,0 +1,58 @@
+May 07 22:17:04.193 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+May 07 22:17:04.193 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 41623.
+May 07 22:17:04.249 HYPERVISOR: exec_cmd: hypervisor version 
+May 07 22:17:04.257 HYPERVISOR: exec_cmd: hypervisor working_dir /home/jaume/Dropbox/UdL/Xarxes2/XarxesPract2/Part1/project-files/dynamips 
+May 07 22:17:04.259 GENERAL: working_dir=/home/jaume/Dropbox/UdL/Xarxes2/XarxesPract2/Part1/project-files/dynamips
+May 07 22:17:04.267 HYPERVISOR: exec_cmd: vm create C3 4 c7200 
+May 07 22:17:04.267 VM: VM C3 created.
+May 07 22:17:04.271 HYPERVISOR: exec_cmd: vm set_con_tcp_port C3 5003 
+May 07 22:17:04.275 HYPERVISOR: exec_cmd: c7200 get_mac_addr C3 
+May 07 22:17:04.279 HYPERVISOR: exec_cmd: vm get_status C3 
+May 07 22:17:04.280 HYPERVISOR: exec_cmd: vm slot_add_binding C3 0 0 C7200-IO-FE 
+May 07 22:17:04.282 HYPERVISOR: exec_cmd: vm set_ios C3 /home/jaume/GNS3/images/IOS/c7200-jk9s-mz.124-13b.image 
+May 07 22:17:04.284 HYPERVISOR: exec_cmd: vm set_nvram C3 512 
+May 07 22:17:04.286 HYPERVISOR: exec_cmd: vm set_ram C3 512 
+May 07 22:17:04.288 HYPERVISOR: exec_cmd: c7200 set_mac_addr C3 ca04.3f7b.0000 
+May 07 22:17:04.294 HYPERVISOR: exec_cmd: vm set_disk0 C3 0 
+May 07 22:17:04.300 HYPERVISOR: exec_cmd: vm get_status C3 
+May 07 22:17:04.304 HYPERVISOR: exec_cmd: vm slot_add_binding C3 1 0 PA-FE-TX 
+May 07 22:17:04.308 HYPERVISOR: exec_cmd: vm get_status C3 
+May 07 22:17:04.310 HYPERVISOR: exec_cmd: vm slot_add_binding C3 2 0 PA-FE-TX 
+May 07 22:17:04.312 HYPERVISOR: exec_cmd: vm get_status C3 
+May 07 22:17:04.313 HYPERVISOR: exec_cmd: vm set_idle_pc C3 0x608724c0 
+May 07 22:17:04.315 HYPERVISOR: exec_cmd: vm get_status C3 
+May 07 22:17:04.316 HYPERVISOR: exec_cmd: vm slot_remove_binding C3 0 0 
+May 07 22:17:04.320 HYPERVISOR: exec_cmd: vm get_status C3 
+May 07 22:17:04.327 HYPERVISOR: exec_cmd: vm slot_add_binding C3 0 0 C7200-IO-2FE 
+May 07 22:17:04.332 HYPERVISOR: exec_cmd: vm set_config C3 configs/i4_startup-config.cfg 
+May 07 22:17:04.574 HYPERVISOR: exec_cmd: nio create_udp udp-4c3e9ea0-d256-4485-8731-35fb1addbbf7 10003 127.0.0.1 10002 
+May 07 22:17:04.583 HYPERVISOR: exec_cmd: vm slot_add_nio_binding C3 0 0 udp-4c3e9ea0-d256-4485-8731-35fb1addbbf7 
+May 07 22:17:04.585 HYPERVISOR: exec_cmd: vm get_status C3 
+May 07 22:17:16.050 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+May 07 22:17:16.050 VM: VM Ghost created.
+May 07 22:17:16.055 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/jaume/GNS3/images/IOS/c7200-jk9s-mz.124-13b.image 
+May 07 22:17:16.056 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+May 07 22:17:16.057 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c7200-jk9s-mz.124-13b.image-512.ghost 
+May 07 22:17:16.058 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+May 07 22:17:16.059 HYPERVISOR: exec_cmd: vm get_status Ghost 
+May 07 22:17:16.059 HYPERVISOR: exec_cmd: vm start Ghost 
+May 07 22:17:16.315 HYPERVISOR: exec_cmd: vm get_status Ghost 
+May 07 22:17:16.317 HYPERVISOR: exec_cmd: vm stop Ghost 
+May 07 22:17:16.483 VM: VM Ghost shutdown.
+May 07 22:17:16.484 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+May 07 22:17:16.484 VM: VM Ghost destroyed.
+May 07 22:17:16.487 HYPERVISOR: exec_cmd: vm set_ghost_status C3 2 
+May 07 22:17:16.488 HYPERVISOR: exec_cmd: vm set_ghost_file C3 c7200-jk9s-mz.124-13b.image-512.ghost 
+May 07 22:17:16.490 HYPERVISOR: exec_cmd: vm get_status C3 
+May 07 22:17:16.491 HYPERVISOR: exec_cmd: vm start C3 
+May 07 22:18:52.249 HYPERVISOR: exec_cmd: vm get_status C3 
+May 07 22:18:52.255 HYPERVISOR: exec_cmd: vm stop C3 
+May 07 22:18:52.384 VM: VM C3 shutdown.
+May 07 22:18:52.387 HYPERVISOR: exec_cmd: vm extract_config C3 
+May 07 22:18:53.810 HYPERVISOR: exec_cmd: vm get_status C3 
+May 07 22:18:53.813 HYPERVISOR: exec_cmd: vm extract_config C3 
+May 07 22:18:53.816 HYPERVISOR: exec_cmd: vm delete C3 
+May 07 22:18:53.816 VM: VM C3 destroyed.
+May 07 22:18:53.821 HYPERVISOR: exec_cmd: hypervisor stop 
+May 07 22:18:53.855 HYPERVISOR: Stopped.
+May 07 22:18:53.855 GENERAL: reset done.

@@ -1,0 +1,43 @@
+Jun 06 12:06:24.036 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Jun 06 12:06:24.037 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60481.
+Jun 06 12:06:24.055 HYPERVISOR: exec_cmd: hypervisor version 
+Jun 06 12:06:24.058 HYPERVISOR: exec_cmd: hypervisor working_dir /home/jaume/Dropbox/UdL/Xarxes2/XarxesPract2/Part3/project-files/dynamips 
+Jun 06 12:06:24.058 GENERAL: working_dir=/home/jaume/Dropbox/UdL/Xarxes2/XarxesPract2/Part3/project-files/dynamips
+Jun 06 12:06:24.067 HYPERVISOR: exec_cmd: vm create R5 5 c7200 
+Jun 06 12:06:24.067 VM: VM R5 created.
+Jun 06 12:06:24.085 HYPERVISOR: exec_cmd: vm set_con_tcp_port R5 5004 
+Jun 06 12:06:24.091 HYPERVISOR: exec_cmd: c7200 get_mac_addr R5 
+Jun 06 12:06:24.094 HYPERVISOR: exec_cmd: vm get_status R5 
+Jun 06 12:06:24.107 HYPERVISOR: exec_cmd: vm slot_add_binding R5 0 0 C7200-IO-FE 
+Jun 06 12:06:24.127 HYPERVISOR: exec_cmd: vm set_disk0 R5 0 
+Jun 06 12:06:24.139 HYPERVISOR: exec_cmd: vm get_status R5 
+Jun 06 12:06:24.158 HYPERVISOR: exec_cmd: vm slot_remove_binding R5 0 0 
+Jun 06 12:06:24.163 HYPERVISOR: exec_cmd: vm get_status R5 
+Jun 06 12:06:24.167 HYPERVISOR: exec_cmd: vm slot_add_binding R5 0 0 C7200-IO-2FE 
+Jun 06 12:06:24.170 HYPERVISOR: exec_cmd: vm get_status R5 
+Jun 06 12:06:24.175 HYPERVISOR: exec_cmd: vm slot_add_binding R5 2 0 PA-FE-TX 
+Jun 06 12:06:24.182 HYPERVISOR: exec_cmd: vm set_ios R5 /home/jaume/GNS3/images/IOS/c7200-jk9s-mz.124-13b.image 
+Jun 06 12:06:24.187 HYPERVISOR: exec_cmd: vm get_status R5 
+Jun 06 12:06:24.203 HYPERVISOR: exec_cmd: vm set_idle_pc R5 0x608724c0 
+Jun 06 12:06:24.210 HYPERVISOR: exec_cmd: vm set_ram R5 512 
+Jun 06 12:06:24.215 HYPERVISOR: exec_cmd: vm get_status R5 
+Jun 06 12:06:24.218 HYPERVISOR: exec_cmd: vm slot_add_binding R5 1 0 PA-FE-TX 
+Jun 06 12:06:24.222 HYPERVISOR: exec_cmd: vm set_nvram R5 512 
+Jun 06 12:06:24.226 HYPERVISOR: exec_cmd: c7200 set_mac_addr R5 ca05.18f6.0000 
+Jun 06 12:06:24.229 HYPERVISOR: exec_cmd: vm set_config R5 configs/i5_startup-config.cfg 
+Jun 06 12:06:24.550 HYPERVISOR: exec_cmd: nio create_udp udp-fb62c22f-ef39-496f-bbb7-76f3b5156656 10011 127.0.0.1 10007 
+Jun 06 12:06:24.553 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 0 udp-fb62c22f-ef39-496f-bbb7-76f3b5156656 
+Jun 06 12:06:24.565 HYPERVISOR: exec_cmd: vm get_status R5 
+Jun 06 12:06:24.585 HYPERVISOR: exec_cmd: nio create_udp udp-a06d4a46-e974-4541-b2e8-f9c51e5458da 10012 127.0.0.1 10013 
+Jun 06 12:06:24.589 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 1 udp-a06d4a46-e974-4541-b2e8-f9c51e5458da 
+Jun 06 12:06:24.596 HYPERVISOR: exec_cmd: vm get_status R5 
+Jun 06 12:06:24.683 HYPERVISOR: exec_cmd: nio create_udp udp-ea398ebb-a021-467f-8d24-37b75161799b 10019 127.0.0.1 10018 
+Jun 06 12:06:24.684 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 1 0 udp-ea398ebb-a021-467f-8d24-37b75161799b 
+Jun 06 12:06:24.685 HYPERVISOR: exec_cmd: vm get_status R5 
+Jun 06 12:06:30.640 HYPERVISOR: exec_cmd: vm get_status R5 
+Jun 06 12:06:30.645 HYPERVISOR: exec_cmd: vm extract_config R5 
+Jun 06 12:06:30.648 HYPERVISOR: exec_cmd: vm delete R5 
+Jun 06 12:06:30.648 VM: VM R5 destroyed.
+Jun 06 12:06:30.652 HYPERVISOR: exec_cmd: hypervisor stop 
+Jun 06 12:06:31.052 HYPERVISOR: Stopped.
+Jun 06 12:06:31.052 GENERAL: reset done.

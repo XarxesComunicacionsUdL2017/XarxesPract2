@@ -1,0 +1,40 @@
+Jun 06 12:06:23.988 HYPERVISOR: Release 0.2.16-amd64/Linux (tag 2015060118)
+Jun 06 12:06:23.988 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56133.
+Jun 06 12:06:24.026 HYPERVISOR: exec_cmd: hypervisor version 
+Jun 06 12:06:24.031 HYPERVISOR: exec_cmd: hypervisor working_dir /home/jaume/Dropbox/UdL/Xarxes2/XarxesPract2/Part3/project-files/dynamips 
+Jun 06 12:06:24.031 GENERAL: working_dir=/home/jaume/Dropbox/UdL/Xarxes2/XarxesPract2/Part3/project-files/dynamips
+Jun 06 12:06:24.034 HYPERVISOR: exec_cmd: vm create R3 3 c7200 
+Jun 06 12:06:24.034 VM: VM R3 created.
+Jun 06 12:06:24.038 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 5002 
+Jun 06 12:06:24.042 HYPERVISOR: exec_cmd: c7200 get_mac_addr R3 
+Jun 06 12:06:24.047 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 12:06:24.051 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-FE 
+Jun 06 12:06:24.053 HYPERVISOR: exec_cmd: vm set_disk0 R3 0 
+Jun 06 12:06:24.057 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 12:06:24.059 HYPERVISOR: exec_cmd: vm slot_remove_binding R3 0 0 
+Jun 06 12:06:24.070 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 12:06:24.090 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-2FE 
+Jun 06 12:06:24.092 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 12:06:24.105 HYPERVISOR: exec_cmd: vm slot_add_binding R3 2 0 PA-FE-TX 
+Jun 06 12:06:24.125 HYPERVISOR: exec_cmd: vm set_ios R3 /home/jaume/GNS3/images/IOS/c7200-jk9s-mz.124-13b.image 
+Jun 06 12:06:24.129 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 12:06:24.142 HYPERVISOR: exec_cmd: vm set_idle_pc R3 0x608724c0 
+Jun 06 12:06:24.161 HYPERVISOR: exec_cmd: vm set_ram R3 512 
+Jun 06 12:06:24.164 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 12:06:24.169 HYPERVISOR: exec_cmd: vm slot_add_binding R3 1 0 PA-FE-TX 
+Jun 06 12:06:24.173 HYPERVISOR: exec_cmd: vm set_nvram R3 512 
+Jun 06 12:06:24.180 HYPERVISOR: exec_cmd: c7200 set_mac_addr R3 ca03.1054.0000 
+Jun 06 12:06:24.185 HYPERVISOR: exec_cmd: vm set_config R3 configs/i3_startup-config.cfg 
+Jun 06 12:06:24.524 HYPERVISOR: exec_cmd: nio create_udp udp-c104c18d-7b2d-456e-ac32-72f96e354a5f 10006 127.0.0.1 10008 
+Jun 06 12:06:24.524 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 0 udp-c104c18d-7b2d-456e-ac32-72f96e354a5f 
+Jun 06 12:06:24.525 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 12:06:24.537 HYPERVISOR: exec_cmd: nio create_udp udp-ba27d1e7-c8ed-4d88-81f2-888dd97b80ba 10009 127.0.0.1 10010 
+Jun 06 12:06:24.546 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 1 udp-ba27d1e7-c8ed-4d88-81f2-888dd97b80ba 
+Jun 06 12:06:24.552 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 12:06:30.642 HYPERVISOR: exec_cmd: vm get_status R3 
+Jun 06 12:06:30.646 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jun 06 12:06:30.649 HYPERVISOR: exec_cmd: vm delete R3 
+Jun 06 12:06:30.649 VM: VM R3 destroyed.
+Jun 06 12:06:30.653 HYPERVISOR: exec_cmd: hypervisor stop 
+Jun 06 12:06:31.018 HYPERVISOR: Stopped.
+Jun 06 12:06:31.018 GENERAL: reset done.
